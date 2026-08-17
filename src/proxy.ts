@@ -9,7 +9,7 @@ export async function proxy(req: NextRequest) {
     return NextResponse.next();
   }
 
-  return NextResponse.redirect(`${process.env.NEXTAUTH_URL}login`);
+  return NextResponse.redirect(`${process.env.NEXTAUTH_URL}/login`);
 }
 export const config = {
   matcher: ["/cart", "/profile"],

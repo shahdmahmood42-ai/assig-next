@@ -43,22 +43,7 @@ export const nextAuthConfig: NextAuthOptions = {
       },
     }),
   ],
-  // callbacks: {
-  //   jwt: function (param) {
-  //     if (param.user) {
-  //       param.token.routeToken = param.user.tokenCredentials;
-  //       param.token.id = param.user.id;
-  //     }
-  //     console.log("JWT param", param);
-  //     return param.token;
-  //   },
-  //   session: function (param) {
-  //     param.session.user.id = param.token.id;
-
-  //     console.log("session param", param);
-  //     return param.session;
-  //   },
-  // },
+  
 
   callbacks: {
     jwt: ({ token, user }) => {
@@ -84,6 +69,4 @@ export const nextAuthConfig: NextAuthOptions = {
     signIn: "/login",
   },
 };
-function JwtDecode(token: any): { id: string } {
-  throw new Error("Function not implemented.");
-}
+
